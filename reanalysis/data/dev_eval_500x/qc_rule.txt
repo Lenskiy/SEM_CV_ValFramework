@@ -1,0 +1,18 @@
+# Quality-control check ("will this sensor respond at all?"), written 2026-10-22,
+# BEFORE any classification result was computed. Added after the regression results were seen, so it is
+# reported as a post-hoc addition to the plan; it uses no new model and no new tuning.
+#
+# Non-responder: rel_resp_median < 0.01 (median relative resistance change below 1% over 0.1-1 ppm acetone).
+#   Development set: 22 non-responders of 56 (the threshold sits in a gap of the label distribution).
+#   Sensitivity analyses (reported, never used to choose): 0.003 and 0.02.
+# Score: the selected regression model's predicted log10 response (selection_rule_500x.txt); lower = more
+#   likely a non-responder. No separate classifier is trained.
+# Development metric: AUC of out-of-fold scores on repeat 0 of the 5-fold split, with a 10,000-permutation p.
+#   Baseline: the recipe-only ridge model's out-of-fold scores on the same split.
+# Operating point: the highest score cutoff on the development out-of-fold scores that catches >= 80% of
+#   development non-responders. Applied unchanged to the locked set.
+# Locked metrics, computed in the same one-shot scoring step as the regression score:
+#   AUC (+ permutation p), recall of non-responders and specificity at the operating point.
+#
+# Proposed bar for an npj Computational Materials submission (the authors' decision, written down now):
+#   locked regression rho >= 0.5 with permutation p < 0.05, AND locked QC AUC >= 0.80 with permutation p < 0.05.

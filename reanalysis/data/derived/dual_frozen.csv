@@ -1,0 +1,7 @@
+target,loss,rho_regression,rho_regression_sd,rho_expected_class,rho_expected_class_sd
+response,regression only,-0.012,0.03,,
+response,CE + 0.001 MSE,-0.012,0.03,0.223,0.007
+response,CE + 1 MSE,-0.012,0.03,0.223,0.007
+r_air,regression only,0.317,0.01,,
+r_air,CE + 0.001 MSE,0.317,0.01,0.36,0.002
+r_air,CE + 1 MSE,0.317,0.01,0.36,0.002

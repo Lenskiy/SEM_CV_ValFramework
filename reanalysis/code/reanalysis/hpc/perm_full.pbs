@@ -1,0 +1,19 @@
+#!/bin/bash
+#PBS -N zno_perm
+#PBS -l select=1:ncpus=16:mem=32gb
+#PBS -l walltime=12:00:00
+#PBS -j oe
+# Full-correction permutation null, one chunk. From .../zno_xai/code:
+#   qsub -N perm_obs -o ../logs/perm_obs.out -v OBS=1 perm_full.pbs
+#   qsub -N perm_000 -o ../logs/perm_000.out -v START=0,STOP=20 perm_full.pbs
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+: ${START:=0} ${STOP:=20} ${OBS:=0}
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+for f in common.py dev_eval.py perm_full.py; do echo "PROV $(md5sum $f | cut -c1-12) $f"; done
+ARGS="--features $B/features --configs-dir $B/data/dev_eval_500x --labels $B/data/derived/labels_v2.csv --locked $B/data/derived/locked_test_sensors.txt --out-dir $B/perm_full --workers 16"
+if [ "$OBS" = 1 ]; then python -u perm_full.py $ARGS --observed; else python -u perm_full.py $ARGS --start $START --stop $STOP; fi
+echo "Finished $(date)"

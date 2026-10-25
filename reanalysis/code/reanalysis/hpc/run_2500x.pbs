@@ -1,0 +1,27 @@
+#!/bin/bash
+#PBS -N zno_2500x
+#PBS -l select=1:ncpus=16:ngpus=1:mem=64gb:gpu_model=L40S
+#PBS -l walltime=12:00:00
+#PBS -j oe
+# The 2,500x analysis plan up to 'choose' (GPU for the features, CPU for the rest).
+# Images in $B/data/2500x/<sensor>-2500x/. From .../zno_xai/code:
+#   qsub -q adfagpu -N run2500 -o ../logs/run2500.out run_2500x.pbs
+# QC review: if qc flags images, inspect them, write $B/data/derived/qc_manual_exclusions.csv
+# (file,reason) and resubmit. 'final' is run separately, by hand, after 'choose'.
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+for f in common.py dev_eval.py hm_morphology.py extract_features.py eval_2500x.py; do echo "PROV $(md5sum $f | cut -c1-12) $f"; done
+for f in labels_v2.csv locked_test_sensors.txt discovery_sensors.txt; do echo "DATA $(sha256sum $B/data/derived/$f | cut -c1-16) $f"; done
+python -u extract_features.py --sem $B/data/2500x --out $B/features_2500x \
+  --backbones dinov2_vitb14 --tilings n448 --norms pct
+MAN=$B/data/derived/qc_manual_exclusions.csv
+O="--images $B/data/2500x --features $B/features_2500x --labels $B/data/derived/labels_v2.csv \
+   --locked $B/data/derived/locked_test_sensors.txt --discovery $B/data/derived/discovery_sensors.txt \
+   --out $B/eval_2500x --repeats 20 --n-perm 1000"
+if [ -f $MAN ]; then O="$O --manual-exclusions $MAN"; fi
+for st in qc measure session h1 cv choose; do python -u eval_2500x.py $st $O; done
+echo "Finished $(date)"

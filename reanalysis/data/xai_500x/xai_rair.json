@@ -1,0 +1,59 @@
+{
+ "oof_rho_repeat0": 0.524,
+ "max_exactness_gap": 7.957220073961935e-07,
+ "types": {
+  "0": {
+   "share": 0.094,
+   "mean_tile_score_r_air": 5.971,
+   "mean_tile_score_response": -1.623
+  },
+  "1": {
+   "share": 0.199,
+   "mean_tile_score_r_air": 5.786,
+   "mean_tile_score_response": -1.458
+  },
+  "2": {
+   "share": 0.103,
+   "mean_tile_score_r_air": 3.406,
+   "mean_tile_score_response": -2.401
+  },
+  "3": {
+   "share": 0.038,
+   "mean_tile_score_r_air": 3.33,
+   "mean_tile_score_response": -2.293
+  },
+  "4": {
+   "share": 0.087,
+   "mean_tile_score_r_air": 5.028,
+   "mean_tile_score_response": -1.592
+  },
+  "5": {
+   "share": 0.243,
+   "mean_tile_score_r_air": 5.643,
+   "mean_tile_score_response": -1.793
+  },
+  "6": {
+   "share": 0.136,
+   "mean_tile_score_r_air": 5.676,
+   "mean_tile_score_response": -1.7
+  },
+  "7": {
+   "share": 0.098,
+   "mean_tile_score_r_air": 3.207,
+   "mean_tile_score_response": -2.493
+  }
+ },
+ "mean_tile_score_r_air_all": 5.095,
+ "rank_agreement_types_rho": 0.786,
+ "tile_level_rho_r_air_vs_response_scores": 0.841,
+ "removal_high_deposition": {
+  "n": 9,
+  "change_overgrowth_removed": 0.85,
+  "change_random_removed": 0.005
+ },
+ "removal_rest": {
+  "n": 47,
+  "change_overgrowth_removed": 0.134,
+  "change_random_removed": -0.0
+ }
+}

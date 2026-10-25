@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -N zno_xfeat
+#PBS -l select=1:ncpus=16:mem=48gb
+#PBS -l walltime=8:00:00
+#PBS -j oe
+# Frozen ViT-B n448/pct features (the pre-registered config) for the replicate
+# 500x images and the 2,500x / 10,000x / 20,000x images, on CPU. From .../zno_xai/code:
+#   qsub -N xfeat -o ../logs/xfeat.out extra_features.pbs
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+for f in common.py extract_features.py; do echo "PROV $(md5sum $f | cut -c1-12) $f"; done
+O="--backbones dinov2_vitb14 --tilings n448 --norms pct --batch 16"
+python -u extract_features.py --sem $B/data/replicate_500x --out $B/features_replicate $O
+for m in 2500x 10000x 20000x; do
+  python -u extract_features.py --sem $B/data/hm/$m --out $B/features_hm_$m $O
+done
+echo "Finished $(date)"

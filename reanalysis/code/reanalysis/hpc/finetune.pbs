@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -N zno_ft
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb:gpu_model=L40S
+#PBS -l walltime=8:00:00
+#PBS -j oe
+# Fine-tune ViT-B on one outer fold. Submit from .../zno_xai/code:
+#   qsub -q adfagpu -N ft_smoke -o ../logs/ft_smoke.out -v FOLD=0,SMOKE=1 finetune.pbs
+#   qsub -q adfagpu -N ft_s0_f0 -o ../logs/ft_s0_f0.out -v FOLD=0,SEED=0 finetune.pbs
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+: ${FOLD:=0} ${SEED:=0} ${UNFREEZE:=2} ${SMOKE:=0}
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+nvidia-smi -L || true
+for f in common.py dev_eval.py finetune.py; do echo "PROV $(md5sum $f | cut -c1-12) $f"; done
+OPTS="--fold $FOLD --seed $SEED --unfreeze $UNFREEZE"
+OUT=$B/ft_runs
+if [ "$SMOKE" = 1 ]; then OPTS="$OPTS --smoke"; OUT=$B/ft_smoke; fi
+# the same fold may be queued on two GPU types; whichever starts second skips
+if [ -f $OUT/ft_u${UNFREEZE}_s$SEED/fold$FOLD/preds.csv ]; then echo "already done: s$SEED fold$FOLD"; exit 0; fi
+python -u finetune.py --sem $B/data/500x --labels $B/data/derived/labels_v2.csv \
+  --locked $B/data/derived/locked_test_sensors.txt --out $OUT $OPTS
+echo "Finished $(date)"

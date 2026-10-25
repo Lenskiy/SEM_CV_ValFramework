@@ -1,0 +1,41 @@
+{
+ "n": 56,
+ "recipe->R_air": {
+  "rho": 0.395,
+  "rho_sd": 0.033,
+  "r2": 0.112
+ },
+ "images->R_air": {
+  "rho": 0.512,
+  "rho_sd": 0.045,
+  "r2": 0.301
+ },
+ "images+recipe->R_air": {
+  "rho": 0.567,
+  "rho_sd": 0.053,
+  "r2": 0.327
+ },
+ "recipe->response": {
+  "rho": 0.014,
+  "rho_sd": 0.117,
+  "r2": -0.07
+ },
+ "images->response": {
+  "rho": 0.253,
+  "rho_sd": 0.053,
+  "r2": 0.076
+ },
+ "a_images_vs_R_air_beyond_recipe": {
+  "rho": 0.484,
+  "perm_p": 0.0004
+ },
+ "b_R_air_vs_response_beyond_recipe": {
+  "rho": 0.755,
+  "perm_p": 0.0001
+ },
+ "c_images_vs_response_beyond_R_air": {
+  "rho": -0.126,
+  "perm_p": 0.8213
+ },
+ "R_air_vs_response_rho": 0.811
+}

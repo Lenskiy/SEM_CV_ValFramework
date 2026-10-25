@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -N zno_small
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb:gpu_model=L40S
+#PBS -l walltime=4:00:00
+#PBS -j oe
+# Small CNNs from scratch, one fold. From .../zno_xai/code:
+#   qsub -q adfagpu -N sm_smoke -o ../logs/sm_smoke.out -v MODEL=small_resnet,TARGET=response,FOLD=0,SMOKE=1 small.pbs
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+: ${MODEL:=small_resnet} ${TARGET:=response} ${FOLD:=0} ${SEED:=0} ${SMOKE:=0} ${DUAL:=}
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+nvidia-smi -L || true
+for f in common.py dev_eval.py train_small.py; do echo "PROV $(md5sum $f | cut -c1-12) $f"; done
+OPTS="--model $MODEL --target $TARGET --fold $FOLD --seed $SEED"
+TAG=""
+if [ -n "$DUAL" ]; then OPTS="$OPTS --dual $DUAL"; TAG="_dual$DUAL"; fi
+OUT=$B/small_runs
+if [ "$SMOKE" = 1 ]; then OPTS="$OPTS --smoke"; OUT=$B/small_smoke; fi
+if [ -f $OUT/${MODEL}_${TARGET}${TAG}_s$SEED/fold$FOLD/preds.csv ]; then echo "already done"; exit 0; fi
+python -u train_small.py --sem $B/data/500x --labels $B/data/derived/labels_v2.csv --r-air $B/data/derived/r_air.csv \
+  --locked $B/data/derived/locked_test_sensors.txt --out $OUT $OPTS
+echo "Finished $(date)"

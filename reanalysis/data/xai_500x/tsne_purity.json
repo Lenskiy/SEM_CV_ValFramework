@@ -1,0 +1,23 @@
+{
+ "sensor": {
+  "observed": 0.9103305785123967,
+  "chance": 0.019450000000000002
+ },
+ "imaging month": {
+  "observed": 0.9472623966942149,
+  "chance": 0.3215
+ },
+ "morphology type": {
+  "observed": 0.8349586776859504,
+  "chance": 0.15845000000000004
+ },
+ "response tercile": {
+  "observed": 0.9371590909090909,
+  "chance": 0.33485000000000004
+ },
+ "response tercile, other sensors only": {
+  "observed": 0.39699380165289255,
+  "chance": 0.3234194214876033
+ },
+ "space": "full (1536 dimensions)"
+}

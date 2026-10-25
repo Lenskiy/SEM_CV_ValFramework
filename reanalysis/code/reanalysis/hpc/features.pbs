@@ -1,0 +1,21 @@
+#!/bin/bash
+#PBS -N zno_feat
+#PBS -l select=1:ncpus=8:ngpus=1:mem=64gb:gpu_model=L40S
+#PBS -l walltime=6:00:00
+#PBS -j oe
+# Frozen-feature extraction. Submit from .../zno_xai/code:
+#   qsub -q adfagpu -N feat -o ../logs/feat.out features.pbs
+#   qsub -q adfagpu -N feat_smoke -o ../logs/feat_smoke.out -v LIMIT=3 features.pbs
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+: ${LIMIT:=0}
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+nvidia-smi -L || true
+for f in common.py extract_features.py; do echo "PROV $(md5sum $f | cut -c1-12) $f"; done
+OUT=$B/features
+if [ "$LIMIT" != 0 ]; then OUT=$B/features_smoke; fi
+python -u extract_features.py --sem $B/data/500x --out $OUT --limit $LIMIT
+echo "Finished $(date)"

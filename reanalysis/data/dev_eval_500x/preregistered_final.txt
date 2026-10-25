@@ -1,0 +1,5 @@
+# Config fixed for the one-shot locked-test evaluation, chosen on development sensors only, 2026-10-22.
+# Basis: dev_results_all.csv (5x repeated 5-fold CV, 56 sensors) and perm_vitb_response.csv
+# (100 permutations, p = 0.030 corrected for the 6 ViT-B configs).
+# Native 448 px tiles chosen over n224 (rho 0.247 vs 0.251): lowest across-repeat s.d. (0.021) and highest R2 (0.064).
+response:dinov2_vitb14_n448_pct:mean:img

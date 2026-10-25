@@ -1,0 +1,8 @@
+{
+ "r_air|knn_recipe|concentration": 0.461,
+ "r_air|knn_recipe|current": 0.438,
+ "r_air|knn_recipe|time": 0.465,
+ "response|knn_recipe|concentration": 0.177,
+ "response|knn_recipe|current": 0.302,
+ "response|knn_recipe|time": 0.18
+}

@@ -1,0 +1,23 @@
+model,target,loss,rho_mean,rho_sd,rho_expected_class,rho_expected_class_sd,balanced_accuracy
+frozen ViT-B + ridge,response,ridge,0.25,,,,
+small_resnet,response,regression only,-0.059,0.014,,,
+simple_cnn,response,regression only,-0.072,0.031,,,
+frozen ViT-B + ridge,r_air,ridge,0.524,,,,
+small_resnet,r_air,regression only,0.377,0.017,,,
+simple_cnn,r_air,regression only,0.32,0.027,,,
+small_resnet,response,CE + 0.001 MSE,-0.073,0.007,-0.036,0.017,0.315
+small_resnet,response,CE + 0.01 MSE,-0.099,0.021,-0.027,0.016,0.315
+small_resnet,response,CE + 0.1 MSE,-0.117,0.024,-0.017,0.035,0.308
+small_resnet,response,CE + 1 MSE,-0.076,0.026,0.018,0.035,0.386
+small_resnet,r_air,CE + 0.001 MSE,0.29,0.024,0.275,0.003,0.25
+small_resnet,r_air,CE + 0.01 MSE,0.289,0.027,0.275,0.006,0.25
+small_resnet,r_air,CE + 0.1 MSE,0.291,0.035,0.287,0.01,0.25
+small_resnet,r_air,CE + 1 MSE,0.33,0.045,0.319,0.042,0.274
+simple_cnn,response,CE + 0.001 MSE,-0.055,0.019,0.002,0.017,0.4
+simple_cnn,response,CE + 0.01 MSE,-0.06,0.004,0.005,0.008,0.393
+simple_cnn,response,CE + 0.1 MSE,-0.064,0.005,0.005,0.016,0.405
+simple_cnn,response,CE + 1 MSE,-0.033,0.034,0.021,0.016,0.405
+simple_cnn,r_air,CE + 0.001 MSE,0.266,0.014,0.267,0.018,0.244
+simple_cnn,r_air,CE + 0.01 MSE,0.271,0.005,0.266,0.011,0.238
+simple_cnn,r_air,CE + 0.1 MSE,0.29,0.02,0.271,0.008,0.226
+simple_cnn,r_air,CE + 1 MSE,0.306,0.017,0.266,0.015,0.232

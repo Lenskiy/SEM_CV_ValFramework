@@ -1,0 +1,9 @@
+{
+ "n_tiles": 12400,
+ "n_features": 49,
+ "rho": -0.216,
+ "rho_sd": 0.094,
+ "null_mean": -0.161,
+ "null_sd": 0.171,
+ "perm_p": 0.5824
+}

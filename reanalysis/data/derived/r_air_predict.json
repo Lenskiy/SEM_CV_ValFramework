@@ -1,0 +1,33 @@
+{
+ "A_vitb_r_air": {
+  "n": 56,
+  "rho": 0.512,
+  "rho_sd": 0.045,
+  "r2": 0.301,
+  "null_mean": -0.149,
+  "null_sd": 0.173,
+  "perm_p": 0.001
+ },
+ "B_texture_r_air": {
+  "n": 56,
+  "rho": 0.178,
+  "rho_sd": 0.072,
+  "r2": 0.007,
+  "null_mean": -0.165,
+  "null_sd": 0.163,
+  "perm_p": 0.035
+ },
+ "C_vitb_r_air_outside_high_dep": {
+  "n": 47,
+  "rho": 0.16,
+  "rho_sd": 0.113,
+  "r2": -0.031,
+  "null_mean": -0.168,
+  "null_sd": 0.191,
+  "perm_p": 0.0649
+ },
+ "D_pred_r_air_vs_response": {
+  "rho": 0.322,
+  "n": 56
+ }
+}

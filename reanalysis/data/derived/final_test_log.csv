@@ -1,0 +1,2 @@
+when,config,n_test,rho,r2,mae,perm_p,locked_sha,best_params,qc_dev_auc,qc_cutoff,qc_test_nonresp,qc_test_auc,qc_test_auc_p,qc_test_recall,qc_test_specificity
+2026-10-23T01:22:45,response:dinov2_vitb14_n448_pct:mean:img,15,0.125,-0.0296,0.9906,0.324,bab3b70f7432246a,"{""pca__n_components"": 8, ""ridge__alpha"": 1000.0}",0.5869,-1.647,6,0.6296,0.2273,0.6667,0.6667

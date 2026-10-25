@@ -1,0 +1,41 @@
+#!/bin/bash
+#PBS -N zno_train
+#PBS -l select=1:ncpus=8:ngpus=1:mem=48gb:gpu_model=L40S
+#PBS -l walltime=12:00:00
+#PBS -j oe
+# Submit from /srv/scratch/$USER/zno_xai/code, e.g.
+#   qsub -N tr_sensor_f0 -o ../logs/tr_sensor_f0.out -v CV=sensor,FOLD=0 train.pbs
+# Variables: CV=image|sensor  FOLD=k  PARAMS=0|1  OUTLIER=0|1  FAITHFUL=0|1
+#            SEED=0  SMOKE=0|1 (2 epochs on 512 patches, to test the pipeline)
+#            XAI=0|1 (run xai_analysis.py on the fold afterwards)
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+: ${CV:=sensor} ${FOLD:=0} ${PARAMS:=0} ${OUTLIER:=0} ${FAITHFUL:=0} ${SEED:=0} ${SMOKE:=0} ${XAI:=0}
+
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+nvidia-smi -L || true
+for f in common.py train_cv.py xai_analysis.py; do echo "PROV $(md5sum $f | cut -c1-12) $f $(wc -l < $f) lines"; done
+
+OPTS="--cv $CV --fold $FOLD --seed $SEED"
+[ "$PARAMS" = 1 ] && OPTS="$OPTS --params"
+[ "$OUTLIER" = 1 ] && OPTS="$OPTS --include-outlier"
+[ "$FAITHFUL" = 1 ] && OPTS="$OPTS --faithful"
+OUT=$B/runs
+[ "$SMOKE" = 1 ] && OPTS="$OPTS --epochs 2 --max-train-patches 512" && OUT=$B/runs_smoke
+
+python -u train_cv.py --sem $B/data/500x --snr $B/data/derived/snr_per_sensor.csv --out $OUT $OPTS
+
+if [ "$XAI" = 1 ]; then
+  # same naming as train_cv.py (plain ifs: a failing $(test) in an assignment trips set -e)
+  NAME=${CV}cv
+  if [ "$PARAMS" = 1 ]; then NAME=${NAME}_params; fi
+  if [ "$OUTLIER" = 1 ]; then NAME=${NAME}_withoutlier; fi
+  if [ "$FAITHFUL" = 1 ]; then NAME=${NAME}_faithful; fi
+  XOPTS=""
+  if [ "$SMOKE" = 1 ]; then XOPTS="--n-perm 50"; fi
+  python -u xai_analysis.py --run $OUT/${NAME}_s$SEED --fold $FOLD $XOPTS
+fi
+echo "Finished $(date)"

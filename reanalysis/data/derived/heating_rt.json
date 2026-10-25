@@ -1,0 +1,39 @@
+{
+ "n_sensors": 29,
+ "n_workbooks": 72,
+ "R_air < 1 kOhm": {
+  "rises": 5,
+  "falls": 1,
+  "mixed": 0
+ },
+ "1-10 kOhm": {
+  "rises": 2,
+  "falls": 1,
+  "mixed": 1
+ },
+ "10 kOhm - 1 MOhm": {
+  "rises": 0,
+  "falls": 5,
+  "mixed": 0
+ },
+ ">= 1 MOhm": {
+  "rises": 1,
+  "falls": 12,
+  "mixed": 1
+ },
+ "response < 1%": {
+  "rises": 6,
+  "falls": 3,
+  "mixed": 1
+ },
+ "response >= 1%": {
+  "rises": 2,
+  "falls": 16,
+  "mixed": 1
+ },
+ "rho_TR_vs_log_r_air": {
+  "rho": -0.663,
+  "p_two_sided": 0.0004
+ },
+ "rises_vs_nonresponder_fisher_p": 0.0089
+}

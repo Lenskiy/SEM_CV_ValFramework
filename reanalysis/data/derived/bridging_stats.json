@@ -1,0 +1,82 @@
+{
+ "all": {
+  "gap_loss": {
+   "log_r_air": {
+    "rho": -0.43,
+    "p": 0.0005,
+    "p_bonf": 0.001,
+    "n": 72
+   },
+   "log_response": {
+    "rho": -0.232,
+    "p": 0.049,
+    "p_bonf": 0.098,
+    "n": 72
+   },
+   "h": {
+    "rho": 0.349,
+    "p": 0.0022,
+    "p_bonf": 0.0044,
+    "n": 72
+   }
+  },
+  "gap_contrast": {
+   "log_r_air": {
+    "rho": 0.262,
+    "p": 0.0272,
+    "p_bonf": 0.0544,
+    "n": 72
+   },
+   "log_response": {
+    "rho": 0.171,
+    "p": 0.1471,
+    "p_bonf": 0.2942,
+    "n": 72
+   },
+   "h": {
+    "rho": -0.006,
+    "p": 0.9603,
+    "p_bonf": 1.0,
+    "n": 72
+   }
+  }
+ },
+ "dev": {
+  "n": 56,
+  "gap_loss_vs_overgrowth_share": {
+   "rho": 0.389,
+   "p": 0.0032,
+   "p_bonf": 0.0032,
+   "n": 56
+  },
+  "gap_loss_vs_vit_pred_r_air": {
+   "rho": -0.487,
+   "p": 0.0001,
+   "p_bonf": 0.0001,
+   "n": 56
+  },
+  "cv_gap_only_r_air": {
+   "rho": 0.357,
+   "r2": 0.091
+  },
+  "cv_recipe_r_air": {
+   "rho": 0.395
+  },
+  "cv_recipe_gap_r_air": {
+   "rho": 0.435,
+   "r2": 0.164
+  },
+  "gap_loss_vs_r_air_beyond_recipe": {
+   "rho": -0.353,
+   "p": 0.0073,
+   "p_bonf": 0.0073,
+   "n": 56
+  },
+  "vit_vs_r_air_beyond_recipe_and_gap": {
+   "rho": 0.404,
+   "p": 0.0022,
+   "p_bonf": 0.0022,
+   "n": 56
+  }
+ }
+}

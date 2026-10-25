@@ -1,0 +1,26 @@
+#!/bin/bash
+#PBS -N zno_cpu
+#PBS -l select=1:ncpus=8:mem=32gb
+#PBS -l walltime=4:00:00
+#PBS -j oe
+# CPU jobs: baselines, or summarize. Submit from .../zno_xai/code:
+#   qsub -N baselines -o ../logs/baselines.out -v TASK=baselines cpu.pbs
+#   qsub -N summary   -o ../logs/summary.out   -v TASK=summarize cpu.pbs
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+: ${TASK:=baselines} ${OUTLIER:=0}
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+for f in common.py baselines.py summarize.py; do echo "PROV $(md5sum $f | cut -c1-12) $f"; done
+if [ "$TASK" = baselines ]; then
+  python -u baselines.py --sem $B/data/500x --snr $B/data/derived/snr_per_sensor.csv \
+      --out $B/runs/baselines$([ "$OUTLIER" = 1 ] && echo _withoutlier) $([ "$OUTLIER" = 1 ] && echo --include-outlier)
+else
+  python -u summarize.py $B/runs \
+      --compare sensorcv_s0 sensorcv_params_s0 \
+      --compare sensorcv_s1 sensorcv_params_s1 \
+      --compare sensorcv_s2 sensorcv_params_s2
+fi
+echo "Finished $(date)"

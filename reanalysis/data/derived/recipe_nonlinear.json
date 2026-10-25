@@ -1,0 +1,62 @@
+{
+ "models": {
+  "knn|C,I,t|response": {
+   "rho_mean": 0.24,
+   "rho_sd": 0.063
+  },
+  "knn|C,I,t|r_air": {
+   "rho_mean": 0.44,
+   "rho_sd": 0.041
+  },
+  "knn|C,I,t,h|response": {
+   "rho_mean": 0.313,
+   "rho_sd": 0.064
+  },
+  "knn|C,I,t,h|r_air": {
+   "rho_mean": 0.483,
+   "rho_sd": 0.043
+  },
+  "rf|C,I,t|response": {
+   "rho_mean": 0.034,
+   "rho_sd": 0.079
+  },
+  "rf|C,I,t|r_air": {
+   "rho_mean": 0.242,
+   "rho_sd": 0.071
+  },
+  "rf|C,I,t,h|response": {
+   "rho_mean": 0.105,
+   "rho_sd": 0.072
+  },
+  "rf|C,I,t,h|r_air": {
+   "rho_mean": 0.366,
+   "rho_sd": 0.048
+  },
+  "gp|C,I,t|response": {
+   "rho_mean": 0.086,
+   "rho_sd": 0.112
+  },
+  "gp|C,I,t|r_air": {
+   "rho_mean": 0.299,
+   "rho_sd": 0.094
+  },
+  "gp|C,I,t,h|response": {
+   "rho_mean": 0.163,
+   "rho_sd": 0.108
+  },
+  "gp|C,I,t,h|r_air": {
+   "rho_mean": 0.342,
+   "rho_sd": 0.104
+  }
+ },
+ "best_recipe_r_air": "knn|C,I,t,h|r_air",
+ "best_recipe_response": "knn|C,I,t,h|response",
+ "images_vs_r_air_beyond_nonlinear_recipe": {
+  "rho": 0.38,
+  "p_two_sided": 0.0054
+ },
+ "r_air_vs_response_both_beyond_nonlinear_recipe": {
+  "rho": 0.766,
+  "p_two_sided": 0.0001
+ }
+}

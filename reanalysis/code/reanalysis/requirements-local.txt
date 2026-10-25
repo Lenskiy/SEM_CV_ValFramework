@@ -1,0 +1,167 @@
+anaconda-anon-usage @ file:///home/task_178056140078668/croot/anaconda-anon-usage_1780561464840/work
+anaconda-auth @ file:///home/task_178173115461029/croot/anaconda-auth_1781731241364/work
+anaconda-channel-guide @ file:///home/task_Z0fRdlMTRP-Mg_0/croot/anaconda-channel-guide_1783462760404/work
+anaconda-cli-base @ file:///home/task_178213868123692/croot/anaconda-cli-base_1782138723367/work
+annotated-doc @ file:///work/buildout/croot/annotated-doc_1763636252792/work
+annotated-types @ file:///home/task_176174488017587/conda-bld/annotated-types_1761744894014/work
+anyio @ file:///home/task_177313440493866/croot/anyio_1773134429107/work
+archspec @ file:///home/task_178169990293130/croot/archspec_1781703373809/work
+asttokens==3.0.2
+attrs==26.1.0
+beautifulsoup4==4.15.0
+bleach==6.4.0
+boltons @ file:///work/buildout/croot/boltons_1759961370105/work
+brotlicffi @ file:///home/task_176496124915471/conda-bld/brotlicffi_1764961305283/work
+build @ file:///home/task_176173575969507/conda-bld/python-build_1761736039944/work
+certifi @ file:///home/task_178221496784604/croot/certifi_1782214994840/work/certifi
+cffi @ file:///home/task_176183212682869/conda-bld/cffi_1761832772612/work
+charset-normalizer @ file:///home/task_IT4CAeSZRPOb0_0/croot/charset-normalizer_1782917574135/work
+click==8.4.2
+colorama==0.4.6
+comm==0.2.3
+conda @ file:///home/task_178164409597919/croot/conda_1781645596686/work/conda-src
+conda-anaconda-telemetry @ file:///croot/conda-anaconda-telemetry_1755883788794/work
+conda-anaconda-tos @ file:///home/task_177023043372900/croot/conda-anaconda-tos_1770231074707/work
+conda-content-trust @ file:///home/task_177755414411075/croot/conda-content-trust_1777554193088/work
+conda-libmamba-solver @ file:///home/task_178283231161148/croot/conda-libmamba-solver_1782832341101/work/src
+conda-lockfiles @ file:///home/task_177809008984181/croot/conda-lockfiles_1778090185088/work
+conda-package-handling @ file:///home/task_178172947772168/croot/conda-package-handling_1781731240351/work
+conda-pypi @ file:///home/task_EFMr8AP4TKqfi_0/croot/conda-pypi_1783082586176/work
+conda-rattler-solver @ file:///home/task_178241387241570/croot/conda-rattler-solver_1782413911495/work
+conda-self @ file:///home/task_177808878413514/croot/conda-self_1778088830910/work
+conda_index @ file:///home/task_178223981619030/croot/conda-index_1782239850799/work
+conda_package_streaming @ file:///home/task_178173107304744/croot/conda-package-streaming_1781731221551/work
+contourpy==1.3.3
+cryptography @ file:///home/task_178159992088529/croot/cryptography-split_1781601365370/work
+cycler==0.12.1
+debugpy==1.8.21
+defusedxml==0.7.1
+distro @ file:///work/buildout/croot/distro_1759959180126/work
+executing==2.2.1
+fastjsonschema==2.22.2
+filelock @ file:///home/task_178170106787292/croot/filelock_1781703315595/work
+fonttools==4.63.0
+frozendict @ file:///home/task_Jvay628aQRO4B_0/croot/frozendict_1782910235633/work
+fsspec==2026.4.0
+gnome-extensions-cli==0.11.0
+h11 @ file:///home/task_176193128033921/conda-bld/h11_1761931291684/work
+hf-xet==1.6.0
+httpcore @ file:///work/buildout/croot/httpcore_1761937693110/work
+httpx @ file:///work/buildout/croot/httpx_1762546603281/work
+huggingface_hub==1.27.0
+idna @ file:///home/task_178056148282513/croot/idna_1780561508300/work
+ImageIO==2.38.1
+installer @ file:///home/task_177640854358350/croot/python-installer_1776408588137/work
+ipykernel==7.3.0
+ipython==9.17.1
+ipython_pygments_lexers==1.1.1
+jaraco.classes @ file:///work/buildout/croot/jaraco.classes_1759955461166/work
+jaraco.context @ file:///home/task_176947761921050/croot/jaraco.context_1769477838922/work
+jaraco.functools @ file:///work/buildout/croot/jaraco.functools_1768569533892/work
+jedi==0.20.0
+jeepney @ file:///tmp/build/80754af9/jeepney_1627537048313/work
+Jinja2 @ file:///work/buildout/croot/jinja2_1761937187775/work
+joblib==1.5.3
+jsonpatch @ file:///work/buildout/croot/jsonpatch_1759955513881/work
+jsonpointer @ file:///home/task_177443283861891/croot/jsonpointer_1774432875240/work
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+jupyter_client==8.10.0
+jupyter_core==5.9.1
+jupyterlab_pygments==0.3.0
+keyring @ file:///work/buildout/croot/keyring_1765281605252/work
+kiwisolver==1.5.0
+lazy-loader==0.6
+libmambapy @ file:///home/task_177988138059473/croot/mamba-split_1779881427053/work/libmambapy
+lxml==6.1.1
+markdown-it-py @ file:///home/task_177754049968495/croot/markdown-it-py_1777540556751/work
+MarkupSafe @ file:///home/task_178239084264214/croot/markupsafe_1782390871973/work
+matplotlib==3.11.0
+matplotlib-inline==0.2.2
+mdurl @ file:///work/buildout/croot/mdurl_1759954141496/work
+menuinst @ file:///home/task_178110692322742/croot/menuinst_1781107094355/work
+mistune==3.3.4
+more-itertools @ file:///home/task_177581903711932/croot/more-itertools_1775819400250/work
+mpmath==1.3.0
+msgpack @ file:///home/task_178239918584893/croot/msgpack-python_1782399378611/work
+narwhals==2.24.0
+nbclient==0.11.0
+nbconvert==7.17.1
+nbformat==5.11.1
+nest-asyncio2==1.7.2
+networkx==3.6.1
+numpy==2.5.1
+packaging==25.0
+pandocfilters==1.5.1
+parso==0.8.7
+pexpect==4.9.0
+pillow==12.3.0
+pkce @ file:///work/buildout/croot/pkce_1759959950455/work
+platformdirs @ file:///home/task_177365209447293/croot/platformdirs_1773652962542/work
+pluggy @ file:///home/task_177697287700815/croot/pluggy_1776972935404/work
+prompt_toolkit==3.0.53
+psutil==7.2.2
+ptyprocess==0.7.0
+pure_eval==0.2.3
+py-rattler @ file:///home/task_178126868009432/croot/py-rattler-split_1781273607133/work
+pycosat @ file:///work/buildout/croot/pycosat_1759980170270/work
+pycparser @ file:///home/task_177495969108169/croot/pycparser_1774959731445/work
+pydantic @ file:///home/task_177868317787016/croot/pydantic_1778683872108/work
+pydantic-settings @ file:///home/task_178238929164378/croot/pydantic-settings_1782389336487/work
+pydantic_core @ file:///home/task_177867687046450/croot/pydantic-core_1778676902882/work
+Pygments @ file:///home/task_177512663867166/croot/pygments_1775127020100/work
+PyJWT @ file:///home/task_178093340682456/croot/pyjwt_1780933942277/work
+pymupdf==1.28.0
+pyparsing==3.3.2
+pyproject_hooks @ file:///home/task_176173221709297/conda-bld/pyproject_hooks_1761732856236/work
+PySocks @ file:///home/task_176175231270627/conda-bld/pysocks_1761753008896/work
+python-dateutil==2.9.0.post0
+python-docx==1.2.0
+python-dotenv @ file:///home/rocky/buildout/croot/python-dotenv_1771835654705/work
+python-pptx==1.0.2
+PyYAML==6.0.3
+pyzmq==27.2.0
+readchar @ file:///home/task_MUsi88KMSOmoO_0/croot/readchar_1783505017638/work
+referencing==0.37.0
+regex==2026.7.19
+requests @ file:///home/task_178034867916164/croot/requests_1780348747484/work
+rich @ file:///home/task_177886049372518/croot/rich_1778860787009/work
+rpds-py==2026.6.3
+ruamel.yaml @ file:///home/task_176253513425147/conda-bld/ruamel.yaml_1762535953901/work
+ruamel.yaml.clib @ file:///home/task_176253026464970/conda-bld/ruamel.yaml.clib_1762530279190/work
+safetensors==0.8.0
+scikit-image==0.26.0
+scikit-learn==1.9.0
+scipy==1.18.0
+SecretStorage @ file:///home/task_177512659202892/croot/secretstorage_1775127021908/work
+semver @ file:///home/task_176190311270812/conda-bld/semver_1761903163078/work
+setuptools==82.0.1
+shellingham @ file:///home/task_176191200455191/conda-bld/shellingham_1761912204371/work
+six==1.17.0
+soupsieve==2.9.2
+stack-data==0.6.3
+sympy==1.14.0
+threadpoolctl==3.6.0
+tifffile==2026.10.15
+tinycss2==1.5.1
+tokenizers==0.22.2
+tomli @ file:///home/task_176829644741007/croot/tomli_1768296465363/work
+tomli_w @ file:///croot/tomli-w_1738351312774/work
+tomlkit @ file:///home/task_176289661781503/conda-bld/tomlkit_1762896639657/work
+torch==2.13.0+cpu
+tornado==6.5.8
+tqdm @ file:///home/task_178116781633414/croot/tqdm_1781170430324/work
+traitlets==5.16.1
+transformers==5.15.0
+truststore @ file:///home/task_177860000199646/croot/truststore_1778600065429/work
+typer @ file:///home/task_177870098506678/croot/typer_1778701917047/work
+typing-inspection @ file:///work/buildout/croot/typing-inspection_1761938967408/work
+typing_extensions @ file:///work/buildout/croot/typing_extensions_1759952479399/work
+unearth @ file:///home/task_NqjVgKcmQyiRn_0/croot/unearth_1783060214125/work
+urllib3 @ file:///home/task_177853566424579/croot/urllib3_1778536185042/work
+wcwidth==0.8.3
+webencodings==0.6.1
+websockets==17.2
+wheel==0.47.0
+xlsxwriter==3.2.9
+zstandard @ file:///home/task_177696009044903/croot/zstandard_1776960546951/work

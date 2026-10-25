@@ -1,0 +1,77 @@
+{
+ "R1_r_air_rho_of_mean_prediction": {
+  "value": 0.535,
+  "ci95": [
+   0.292,
+   0.726
+  ]
+ },
+ "R2_without_august_images": 0.511,
+ "R2_without_august_sensors": {
+  "n": 49,
+  "rho": 0.486
+ },
+ "R3_leave_one_level_out": {
+  "r_air|vitb|concentration": 0.299,
+  "r_air|vitb|current": 0.384,
+  "r_air|vitb|time": 0.547,
+  "r_air|recipe|concentration": 0.249,
+  "r_air|recipe|current": 0.36,
+  "r_air|recipe|time": 0.228,
+  "response|vitb|concentration": 0.031,
+  "response|vitb|current": 0.121,
+  "response|vitb|time": 0.222,
+  "response|recipe|concentration": -0.095,
+  "response|recipe|current": 0.008,
+  "response|recipe|time": -0.018
+ },
+ "R4_gap_loss_vs_log_r_air": {
+  "frac0.4_win8": -0.456,
+  "frac0.4_win16": -0.434,
+  "frac0.4_win32": -0.415,
+  "frac0.5_win8": -0.457,
+  "frac0.5_win16": -0.43,
+  "frac0.5_win32": -0.409,
+  "frac0.6_win8": -0.437,
+  "frac0.6_win16": -0.411,
+  "frac0.6_win32": -0.379
+ },
+ "R5_screen_thresholds": {
+  "response<0.005": {
+   "n_dead": 20,
+   "auc": 0.94,
+   "loo": {
+    "sensitivity": 0.9,
+    "specificity": 0.889,
+    "balanced_accuracy": 0.894,
+    "flagged_share": 0.393,
+    "good_sensors_rejected": 4,
+    "dead_sensors_missed": 2
+   }
+  },
+  "response<0.01": {
+   "n_dead": 22,
+   "auc": 0.945,
+   "loo": {
+    "sensitivity": 0.864,
+    "specificity": 0.882,
+    "balanced_accuracy": 0.873,
+    "flagged_share": 0.411,
+    "good_sensors_rejected": 4,
+    "dead_sensors_missed": 3
+   }
+  },
+  "response<0.02": {
+   "n_dead": 23,
+   "auc": 0.941,
+   "loo": {
+    "sensitivity": 0.826,
+    "specificity": 0.848,
+    "balanced_accuracy": 0.837,
+    "flagged_share": 0.429,
+    "good_sensors_rejected": 5,
+    "dead_sensors_missed": 4
+   }
+  }
+ }
+}

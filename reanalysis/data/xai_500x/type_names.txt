@@ -1,0 +1,13 @@
+# Names of the k=8 morphology types (xai_tiles.py, md5 e5f0c1746278), from montage_types.png by appearance only.
+# Written 2026-10-22, before Claim 2 steps 4-7 (mediation, stability, 2,500x grounding, replicates).
+# Note: the per-type mean tile scores and the per-type rho vs response (step 3) had already been printed.
+# type,name
+7,granular film with scattered particles and flakes
+2,rough overgrowth with flakes
+3,defects: lumps peeling or large debris
+5,smooth electrodes with little visible deposit
+6,smooth with dark spots
+0,smooth and uniform
+4,uniform fine-grained film
+1,patchy partial coverage
+# 2026-10-22: types refitted once to save the model (types_model.pkl); 0-8 of ~9,700 tiles per type moved, order and names unchanged.

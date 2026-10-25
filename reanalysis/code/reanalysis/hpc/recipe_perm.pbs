@@ -1,0 +1,16 @@
+#!/bin/bash
+#PBS -N recipe_perm
+#PBS -l select=1:ncpus=16:mem=16gb
+#PBS -l walltime=02:00:00
+#PBS -j oe
+# Nonlinear recipe baselines, permutation null, one chunk. From .../zno_xai/code:
+#   qsub -N rperm_000 -o ../logs/rperm_000.out -v START=0,STOP=50 recipe_perm.pbs
+set -e
+cd $PBS_O_WORKDIR
+module load python/3.11.3
+source /srv/scratch/$USER/envs/zno_xai/bin/activate
+B=/srv/scratch/$USER/zno_xai
+echo "Job $PBS_JOBID on $(hostname) started $(date)"
+for f in common.py dev_eval.py recipe_nonlinear.py recipe_nonlinear_perm.py; do echo "PROV $(md5sum $f | cut -c1-12) $f"; done
+python -u recipe_nonlinear_perm.py --root $B --images $B/features/images.csv --start $START --stop $STOP --workers 16
+echo "Finished $(date)"

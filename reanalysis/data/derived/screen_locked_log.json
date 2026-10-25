@@ -1,0 +1,111 @@
+{
+ "run_at": "2026-10-24T12:33:11",
+ "rule_sha256": "0668138d78807e0dc5a91f86f38aaee73a14e2b66d6d8cf9ef62eccbe8b65fd6",
+ "n": 15,
+ "n_nonresponders": 6,
+ "threshold_ohm": 10000.0,
+ "caught": "6/6",
+ "good_rejected": "1/9",
+ "sensitivity": 1.0,
+ "specificity": 0.889,
+ "balanced_accuracy": 0.944,
+ "auc": 0.907,
+ "auc_ci95": [
+  0.68,
+  1.0
+ ],
+ "auc_perm_p": 0.0037,
+ "sensors": [
+  {
+   "sensor": "0.01M-1000uA-30s",
+   "r_air_ohm": 5364857,
+   "rel_resp": 0.20838830705043443,
+   "flagged": false
+  },
+  {
+   "sensor": "0.01M-3000uA-30s",
+   "r_air_ohm": 1949,
+   "rel_resp": 0.00029445157572732567,
+   "flagged": true
+  },
+  {
+   "sensor": "0.01M-3000uA-60s",
+   "r_air_ohm": 607,
+   "rel_resp": 0.016212138507567628,
+   "flagged": true
+  },
+  {
+   "sensor": "0.01M-500uA-60s",
+   "r_air_ohm": 71315880,
+   "rel_resp": 0.8565482795256468,
+   "flagged": false
+  },
+  {
+   "sensor": "0.05M-1000uA-30s",
+   "r_air_ohm": 913,
+   "rel_resp": 0.0008711104729397209,
+   "flagged": true
+  },
+  {
+   "sensor": "0.05M-100uA-10s",
+   "r_air_ohm": 1196643,
+   "rel_resp": 0.08315215987751556,
+   "flagged": false
+  },
+  {
+   "sensor": "0.05M-3000uA-30s",
+   "r_air_ohm": 2730124,
+   "rel_resp": 0.24254023129908703,
+   "flagged": false
+  },
+  {
+   "sensor": "0.05M-3000uA-60s",
+   "r_air_ohm": 131,
+   "rel_resp": 0.0006747205773035162,
+   "flagged": true
+  },
+  {
+   "sensor": "0.1M-3000uA-10s",
+   "r_air_ohm": 119589,
+   "rel_resp": 0.026290661211671854,
+   "flagged": false
+  },
+  {
+   "sensor": "0.1M-3000uA-30s",
+   "r_air_ohm": 711,
+   "rel_resp": 0.0010581780130777137,
+   "flagged": true
+  },
+  {
+   "sensor": "0.1M-5000uA-10s",
+   "r_air_ohm": 130183,
+   "rel_resp": 0.08923807693456084,
+   "flagged": false
+  },
+  {
+   "sensor": "0.1M-500uA-60s",
+   "r_air_ohm": 671,
+   "rel_resp": 0.004630631768739637,
+   "flagged": true
+  },
+  {
+   "sensor": "0.2M-1000uA-30s",
+   "r_air_ohm": 3614,
+   "rel_resp": 3.926843444320215e-05,
+   "flagged": true
+  },
+  {
+   "sensor": "0.2M-100uA-10s",
+   "r_air_ohm": 104242,
+   "rel_resp": 0.06994556797486715,
+   "flagged": false
+  },
+  {
+   "sensor": "0.2M-100uA-30s",
+   "r_air_ohm": 20108,
+   "rel_resp": 0.07891786879572918,
+   "flagged": false
+  }
+ ],
+ "confirmed": true
+}

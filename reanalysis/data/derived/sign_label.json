@@ -1,0 +1,40 @@
+{
+ "n_dev": 56,
+ "classes_all_dev": {
+  "consistent": 44,
+  "reversed": 1,
+  "inconsistent": 11
+ },
+ "among_response_below_1pct": {
+  "n": 22,
+  "consistent": 11,
+  "no_detectable": 12
+ },
+ "among_response_at_least_1pct": {
+  "n": 34,
+  "consistent": 33,
+  "no_detectable": 2
+ },
+ "rho_r_air_vs_label_paper": 0.811,
+ "rho_r_air_vs_signed_median_change": 0.72,
+ "rho_r_air_vs_label_no_detectable_tied": 0.665,
+ "rho_r_air_vs_label_detectable_only": {
+  "n": 42,
+  "rho": 0.701
+ },
+ "screen_auc_nonresponder_or_no_detectable": {
+  "n_flag": 24,
+  "auc": 0.911,
+  "caught_at_10k": 19,
+  "rejected_good_at_10k": 3
+ },
+ "below_1pct_consistent_vs_not_log_r_air": {
+  "median_consistent": 2.64,
+  "median_not": 3.12,
+  "n": [
+   11,
+   11
+  ],
+  "mannwhitney_p": 0.694
+ }
+}

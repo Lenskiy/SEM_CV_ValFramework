@@ -1,0 +1,14 @@
+# Rule for the one-shot locked-test score at 500x, written 2026-10-22 BEFORE any fine-tuning result exists.
+# Candidates
+#   F  frozen ViT-B, pre-registered config response:dinov2_vitb14_n448_pct:mean:img (preregistered_final.txt)
+#   T  fine-tuned ViT-B (finetune.py, unfreeze 2, 15 epochs, fixed settings), sensor prediction = mean of
+#      tile predictions, averaged over seeds 0, 1, 2
+# Comparison on the development sensors, same split for both: the 5 folds of repeat 0 of
+#   RepeatedKFold(n_splits=5, random_state=0) over the 56 sorted development sensors.
+#   rho_F = Spearman of F's pooled out-of-fold predictions on that split
+#   rho_T = Spearman of T's pooled out-of-fold predictions (seed-averaged)
+# Choose T only if rho_T - rho_F >= 0.05 AND T's single-seed rho beats rho_F for at least 2 of the 3 seeds.
+# Otherwise choose F (simpler, already validated by permutation test).
+# Locked score: F -> dev_eval.py --final response:dinov2_vitb14_n448_pct:mean:img
+#               T -> finetune.py --fold -1 for seeds 0,1,2, then score_locked.py on the 3 locked_preds.csv
+# If any fine-tuning fold or seed fails and cannot be rerun with the same settings, choose F.

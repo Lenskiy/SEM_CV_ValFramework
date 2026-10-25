@@ -1,0 +1,97 @@
+{
+ "n": 72,
+ "j_lim_O2_uA_cm2_at_30s": 33.7,
+ "applied_j_mA_cm2": [
+  2.1,
+  104.2
+ ],
+ "1_spearman": {
+  "I": {
+   "log_r_air": [
+    -0.32,
+    0.0059
+   ],
+   "log_response": [
+    -0.231,
+    0.0548
+   ]
+  },
+  "C": {
+   "log_r_air": [
+    -0.329,
+    0.0055
+   ],
+   "log_response": [
+    -0.176,
+    0.1402
+   ]
+  },
+  "t": {
+   "log_r_air": [
+    -0.133,
+    0.2662
+   ],
+   "log_response": [
+    0.079,
+    0.5084
+   ]
+  },
+  "Q": {
+   "log_r_air": [
+    -0.33,
+    0.0044
+   ],
+   "log_response": [
+    -0.153,
+    0.2038
+   ]
+  },
+  "h_0.02": {
+   "log_r_air": [
+    -0.426,
+    0.0002
+   ],
+   "log_response": [
+    -0.185,
+    0.1192
+   ]
+  },
+  "h_0.048": {
+   "log_r_air": [
+    -0.452,
+    0.0001
+   ],
+   "log_response": [
+    -0.211,
+    0.078
+   ]
+  },
+  "h_0.1": {
+   "log_r_air": [
+    -0.427,
+    0.0002
+   ],
+   "log_response": [
+    -0.179,
+    0.1339
+   ]
+  }
+ },
+ "1_rho_h_minus_rho_Q_ci95": [
+  -0.314,
+  0.065
+ ],
+ "2_interaction": {
+  "coef_logC": -1.524,
+  "coef_logI": -1.031,
+  "coef_logt": -0.749,
+  "coef_logCxlogI": -0.181,
+  "perm_p": 0.8006
+ },
+ "3_nonresponder_loo_balanced_accuracy": {
+  "Q": 0.617,
+  "I": 0.617,
+  "h_0.048": 0.687
+ },
+ "3_n_nonresponders": 28
+}

@@ -1,0 +1,7 @@
+config,rho,null_mean,null_sd,p,p_maxcorrected
+response:dinov2_vitb14_n224_pct:mean:img,0.2511,-0.164,0.1602,0.0297,0.0297
+response:dinov2_vitb14_n224_raw:mean:img,0.2461,-0.1574,0.1624,0.0297,0.0297
+response:dinov2_vitb14_n448_pct:mean:img,0.2466,-0.1583,0.1606,0.0297,0.0297
+response:dinov2_vitb14_n448_raw:mean:img,0.2371,-0.1578,0.1598,0.0297,0.0297
+response:dinov2_vitb14_p480_pct:mean:img,0.2261,-0.1695,0.1538,0.0099,0.0297
+response:dinov2_vitb14_p480_raw:mean:img,0.2282,-0.1713,0.1529,0.0099,0.0297

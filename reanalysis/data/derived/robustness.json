@@ -1,0 +1,90 @@
+{
+ "E1": {
+  "dev_rho": {
+   "value": 0.247,
+   "ci95": [
+    -0.001,
+    0.486
+   ]
+  },
+  "dev_r2": {
+   "value": 0.064,
+   "ci95": [
+    -0.173,
+    0.258
+   ]
+  },
+  "dev_qc_auc": {
+   "value": 0.591,
+   "ci95": [
+    0.431,
+    0.736
+   ]
+  },
+  "locked_rho": {
+   "value": 0.125,
+   "ci95": [
+    -0.48,
+    0.689
+   ]
+  },
+  "locked_qc_auc": {
+   "value": 0.63,
+   "ci95": [
+    0.285,
+    0.909
+   ]
+  },
+  "edge2500_rho": {
+   "value": 0.776,
+   "ci95": [
+    0.24,
+    0.972
+   ]
+  }
+ },
+ "E3": {
+  "vs_log_response": {
+   "rho": 0.811,
+   "p": 0.0,
+   "n": 56
+  },
+  "vs_PC1": {
+   "rho": 0.476,
+   "p": 0.0002,
+   "n": 56
+  },
+  "vs_overgrowth_share": {
+   "rho": -0.579,
+   "p": 0.0,
+   "n": 56
+  },
+  "vs_edge2500": {
+   "rho": 0.517,
+   "p": 0.0849,
+   "n": 12
+  },
+  "median_log_r_air": {
+   "high_deposition_group": 2.26,
+   "rest": 6.21,
+   "bare_10s_250uA": 3.11
+  }
+ },
+ "E4": {
+  "high_deposition": {
+   "n": 9,
+   "mean_change_overgrowth_removed": 0.353,
+   "mean_change_random_removed": 0.006,
+   "mean_overgrowth_share": 0.869
+  },
+  "rest": {
+   "n": 47,
+   "mean_change_overgrowth_removed": 0.061,
+   "mean_change_random_removed": -0.0,
+   "mean_overgrowth_share": 0.126
+  },
+  "all": {
+   "rho_change_vs_overgrowth_share": 0.795
+  }
+ }
+}

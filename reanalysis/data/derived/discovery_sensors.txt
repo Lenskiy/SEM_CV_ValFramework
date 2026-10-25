@@ -1,0 +1,14 @@
+# Discovery set for H1 (2,500x analysis plan): the 12 sensors imaged at 2,500x in Aug 2024.
+# Edge density was chosen on these; they are excluded from the confirmatory H1 test.
+0.01M-250uA-10s
+0.01M-250uA-30s
+0.01M-250uA-60s
+0.05M-250uA-10s
+0.05M-250uA-30s
+0.05M-250uA-60s
+0.1M-250uA-10s
+0.1M-250uA-30s
+0.1M-250uA-60s
+0.2M-250uA-10s
+0.2M-250uA-30s
+0.2M-250uA-60s

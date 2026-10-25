@@ -1,0 +1,8 @@
+# Outcome of selection_rule_500x.txt (sha256 2f91c223e5ae124c), 2026-10-23, from data/ft_runs (15 runs, finetune.py 87a89db15099).
+# Repeat-0 pooled out-of-fold Spearman rho on the 56 development sensors:
+#   F frozen 0.250 | T fine-tuned, seed-averaged 0.155 (seeds 0.132, 0.159, 0.146)
+# rho_T - rho_F = -0.095 (< 0.05); seeds beating F: 0/3 (< 2)  ->  F chosen.
+# Dev QC (non-responder AUC): F 0.587 (p 0.14), T 0.631 (p 0.05).
+# Locked set: NOT yet scored; awaiting the authors' journal decision.
+F
+# 2026-10-23: authors committed to Digital Discovery BEFORE the locked score.

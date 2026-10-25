@@ -1,0 +1,49 @@
+{
+ "n": 56,
+ "n_nonresponders": 22,
+ "auc": {
+  "value": 0.945,
+  "ci95": [
+   0.87,
+   0.997
+  ]
+ },
+ "loo": {
+  "sensitivity": 0.864,
+  "specificity": 0.882,
+  "balanced_accuracy": 0.873,
+  "flagged_share": 0.411,
+  "good_sensors_rejected": 4,
+  "dead_sensors_missed": 3,
+  "threshold_ohm_range": [
+   7772,
+   31027
+  ]
+ },
+ "all56": {
+  "threshold_ohm": 31027,
+  "sensitivity": 0.955,
+  "specificity": 0.882,
+  "balanced_accuracy": 0.918,
+  "flagged_share": 0.446,
+  "good_sensors_rejected": 4,
+  "dead_sensors_missed": 1
+ },
+ "fixed_10kohm": {
+  "sensitivity": 0.864,
+  "specificity": 0.912,
+  "balanced_accuracy": 0.888,
+  "flagged_share": 0.393,
+  "good_sensors_rejected": 3,
+  "dead_sensors_missed": 3
+ },
+ "fixed_100kohm": {
+  "sensitivity": 0.955,
+  "specificity": 0.853,
+  "balanced_accuracy": 0.904,
+  "flagged_share": 0.464,
+  "good_sensors_rejected": 5,
+  "dead_sensors_missed": 1
+ },
+ "image_model_auc": 0.612
+}

@@ -1,0 +1,36 @@
+{
+ "n_sessions": 11,
+ "sensors_per_session": {
+  "2024-10-08": 6,
+  "2024-10-17": 5,
+  "2025-12-09": 7,
+  "2024-10-15": 10,
+  "2025-04-08": 5,
+  "2024-09-17": 4,
+  "2025-02-20": 7,
+  "2025-02-25": 1,
+  "2024-10-23": 6,
+  "2024-10-10": 4,
+  "2024-09-20": 1
+ },
+ "kruskal_r_air_by_session": {
+  "H": 12.47,
+  "p": 0.2548
+ },
+ "session_only_cv_rho": {
+  "mean": 0.036,
+  "sd": 0.097
+ },
+ "leave_one_session_out_images": {
+  "rho": 0.487,
+  "p": 0.003
+ },
+ "leave_one_session_out_recipe_linear": {
+  "rho": 0.37,
+  "p": 0.005
+ },
+ "images_vs_r_air_beyond_session": {
+  "rho": 0.526,
+  "p": 0.0002
+ }
+}

@@ -31,6 +31,7 @@ The environment is described in `ENVIRONMENT.md`.
 | Robustness: bootstrap interval, August images, unseen levels, gap settings | `robustness_chain.py` | `robustness_chain.json` |
 | Nonlinear recipe baselines, their permutation null, unseen levels | `recipe_nonlinear.py`, `recipe_nonlinear_perm.py`, `recipe_lolo.py` | `recipe_nonlinear*.json`, `recipe_lolo.json` |
 | Imaging-session check | `session_check.py` | `session_check.json` |
+| Campaign drift: resistance and response vs imaging date | `campaign_drift.py` | `campaign_drift.json` |
 | Excluded sensor put back (57 sensors) | `outlier57.py` | `outlier57.json` |
 | Response models: development; pre-registered config | `dev_eval.py` | `data/dev_eval_500x/*` |
 | Full correction over 67 configurations | `perm_full.py` (Katana: `hpc/perm_full.pbs`) | `data/dev_eval_500x/perm_full_response.csv` |

@@ -1,0 +1,24 @@
+{
+ "n": 72,
+ "first_day": "2024-08-20",
+ "last_day": "2025-12-09",
+ "n_days": 12,
+ "date_vs_log_r_air": {
+  "rho": 0.07,
+  "p": 0.562
+ },
+ "date_vs_log_response": {
+  "rho": 0.059,
+  "p": 0.624
+ },
+ "below_10kohm_early_late": {
+  "early": "16/38",
+  "late": "14/34",
+  "fisher_p": 1.0
+ },
+ "non_responder_early_late": {
+  "early": "16/38",
+  "late": "12/34",
+  "fisher_p": 0.632
+ }
+}
